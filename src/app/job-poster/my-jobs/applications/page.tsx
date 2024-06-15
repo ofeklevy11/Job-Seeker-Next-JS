@@ -33,13 +33,13 @@ const page = async() => {
     <main className="max-w-[1100px] mx-auto ">
 
         <PageTitle title='All Applications'/>
-    <div className='grid grid-cols-3 grid-rows-3 mt-8 gap-4'>
+    <div className='grid grid-cols-2  my-12 gap-6 '>
         {jobs.map((job) => (
-        <div key={job.id} className='border rounded-lg p-6 flex flex-col gap-4'>
+        <div key={job.id} className={`border rounded-lg p-6 flex flex-col    `}>
           <div>Job: {job.name}</div>
           {job.applications.length > 0 ? (
             job.applications.map(({appliedAt,email,name,phoneNumber,remarks,id}) => (
-              <div key={id} className='flex flex-col gap-4'>
+              <div key={id} className={`flex flex-col gap-4 pb-6 border-b`}>
                 <p>Applicant Email: {email}</p>
                 <p>Applicant Name: {name}</p>
                 <p>Applicant Phone Number: {phoneNumber !== 'your phone number' ? phoneNumber : 'Applicant did not left a phone number.'}</p>
