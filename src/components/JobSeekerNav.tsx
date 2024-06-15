@@ -16,7 +16,6 @@ import { cn } from "@/lib/utils";
 import Logo from "./Logo";
 
 const JobSeekerNav = ({ userType }: { userType: string }) => {
-  console.log(userType);
   
   const pathname = usePathname();
   const jobPosterLinks = [

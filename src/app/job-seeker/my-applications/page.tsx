@@ -18,7 +18,6 @@ const page = async() => {
       job:true
     }
   })
-  console.log(applications);
   
   return (
     <div>

@@ -90,7 +90,6 @@ const page = async ({ searchParams }: Props) => {
   });
 
   const entries = jobs.slice(start, end);
-  console.log(entries);
 
   return (
     <div className="flex flex-col  items-center ">
