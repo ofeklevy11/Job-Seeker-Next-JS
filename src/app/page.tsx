@@ -3,7 +3,14 @@ import PageTitle from "@/components/PageTitle";
 import SignOut from "@/components/SignOut";
 import { Button } from "@/components/ui/button";
 import { getSession, logout } from "@/lib/helpers";
-import { Check, CircleUser, LandPlot, Search, UserCheck, UserPlus } from "lucide-react";
+import {
+  Check,
+  CircleUser,
+  LandPlot,
+  Search,
+  UserCheck,
+  UserPlus,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -543,31 +550,37 @@ export default async function Home() {
             <h3 className="font-bold text-3xl mb-8">How it works?</h3>
             <ul className="flex flex-col gap-8">
               <li className="text-xl font-semibold flex flex-col items-center gap-1">
-                <UserCheck className="text-green-500" size={48}/>
-                Create Your Profile: <span className="text-lg font-normal">Sign up and complete your profile to get
-                personalized job matches.</span>
+                <UserCheck className="text-green-500" size={48} />
+                Create Your Profile:{" "}
+                <span className="text-lg font-normal">
+                  Sign up and complete your profile to get personalized job
+                  matches.
+                </span>
               </li>
               <li className="text-xl font-semibold flex flex-col items-center gap-1">
-                <Search className="text-green-500" size={48}/>
-
-              Browse Jobs:
-              <span className="text-lg font-normal"> Explore thousands of job listings and find the ones
-              that suit you best.</span>
-
+                <Search className="text-green-500" size={48} />
+                Browse Jobs:
+                <span className="text-lg font-normal">
+                  {" "}
+                  Explore thousands of job listings and find the ones that suit
+                  you best.
+                </span>
               </li>
               <li className="text-xl font-semibold flex flex-col items-center gap-1">
-              <UserPlus className="text-green-500" size={48}/>
-
-                Apply: 
-                <span className="text-lg font-normal">Submit your application with ease using our user-friendly
-                platform.</span>
-                
+                <UserPlus className="text-green-500" size={48} />
+                Apply:
+                <span className="text-lg font-normal">
+                  Submit your application with ease using our user-friendly
+                  platform.
+                </span>
               </li>
               <li className="text-xl font-semibold flex flex-col items-center gap-1">
-              <Check className="text-green-500" size={48}/>
-
-                Get Hired: <span className="text-lg font-normal">Land your dream job and take the next step in your
-                career journey.</span> 
+                <Check className="text-green-500" size={48} />
+                Get Hired:{" "}
+                <span className="text-lg font-normal">
+                  Land your dream job and take the next step in your career
+                  journey.
+                </span>
               </li>
             </ul>
           </div>
@@ -578,23 +591,20 @@ export default async function Home() {
             <div className="flex flex-col gap-4 rounded-lg border p-6 items-center">
               <CircleUser size={48} />
               <h2 className="text-xl font-bold">John D.</h2>
-               "I found my dream job within a week of signing up. The
-              process was so smooth and the recommendations were spot on!"
+              "I found my dream job within a week of signing up. The process was
+              so smooth and the recommendations were spot on!"
             </div>
             <div className="flex flex-col gap-4 rounded-lg border p-6 items-center">
-            <CircleUser size={48} />
-            <h2 className="text-xl font-bold">Sarah M.</h2>
-
-               "The personalized job matches saved me so much time. I
-              landed a fantastic job that I love!"
+              <CircleUser size={48} />
+              <h2 className="text-xl font-bold">Sarah M.</h2>
+              "The personalized job matches saved me so much time. I landed a
+              fantastic job that I love!"
             </div>
             <div className="flex flex-col gap-4 rounded-lg border p-6 items-center">
-            <CircleUser size={48} />
-
-            <h2 className="text-xl font-bold">Michael B.</h2>
-
-               "The expert advice and tips helped me prepare for my
-              interviews and get hired quickly."
+              <CircleUser size={48} />
+              <h2 className="text-xl font-bold">Michael B.</h2>
+              "The expert advice and tips helped me prepare for my interviews
+              and get hired quickly."
             </div>
           </div>
         </section>
@@ -608,8 +618,11 @@ export default async function Home() {
             Join thousands of job seekers who have found their perfect job with
             Job Seeker.
           </p>
-          <Link href={"/sign-up"}>
-            <Button className="bg-teal-400 font-bold hover:bg-teal-400/65 "> Sign Up Now</Button>
+          <Link href={"/signup"}>
+            <Button className="bg-teal-400 font-bold hover:bg-teal-400/65 ">
+              {" "}
+              Sign Up Now
+            </Button>
           </Link>
         </section>
         <footer className="text-center py-10 flex flex-col gap-2 border rounded-lg mb-12">
@@ -618,7 +631,7 @@ export default async function Home() {
             best opportunities. Whether you're looking for your first job or
             aiming to advance your career, we've got you covered.
           </p>
-          <PageTitle title="Quick Links" className="mt-2 text-xl"/>
+          <PageTitle title="Quick Links" className="mt-2 text-xl" />
           <Link href={"/sign-up"}>
             <Button variant={"link"}> Job Listing</Button>
           </Link>

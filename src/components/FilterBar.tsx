@@ -12,14 +12,23 @@ import { Input } from "./ui/input";
 import { Search } from "lucide-react";
 import { Label } from "./ui/label";
 import PageTitle from "./PageTitle";
+import useDebounce from "@/hooks/useDebounce";
 
 const FilterBar = () => {
   const [jobType, setJobType] = useState("");
   const [experience, setExperience] = useState("");
   const [search, setSearch] = useState("");
+  const debouncedSearch = useDebounce(search, 500); // Debounce for 1500ms
+
   const [location, setLocation] = useState("");
+  const debouncedLocation = useDebounce(location, 500); // Debounce for 1500ms
+
   const [greaterThan, setGreaterThan] = useState(0);
+  const debouncedGreaterThan = useDebounce(greaterThan, 500); // Debounce for 1500ms
+
   const [lessThan, setLessThan] = useState(100000);
+  const debouncedLessThan = useDebounce(lessThan, 500); // Debounce for 1500ms
+
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -32,7 +41,7 @@ const FilterBar = () => {
         page
       )}&per_page=${per_page}&jobType=${jobType}&experience=${experience}&search=${search}&location=${location}&lessThan=${lessThan}&greaterThan=${greaterThan}`
     );
-  }, [jobType, experience, search, location, lessThan, greaterThan]);
+  }, [jobType, experience, debouncedSearch, debouncedLocation, debouncedLessThan, debouncedGreaterThan]);
   //   const jobType = searchParams['jobType'] ?? 'full-time'
 
   return (

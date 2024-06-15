@@ -29,7 +29,7 @@ export async function signUp(formData: FormData) {
       type,
     },
   });
-  redirect("/");
+  redirect("/login");
 }
 
 export async function signIn(formData: FormData) {
@@ -59,7 +59,7 @@ export async function signIn(formData: FormData) {
     cookies().set("session-client", user.id, { expires });
   }
 
-  redirect("/");
+  redirect("/job-seeker");
 }
 
 export async function createJob(formData: FormData) {
